@@ -37,6 +37,12 @@
       //Adiciona 7 dias a data/hora atual (adicionado em millisegundos)
       weekFromToday = new Date(hoje.getTime() + 7 * 24 * 60 * 60 * 1000);
       //Cria um array para armazenar os nomes dos dias/mesNomes
-      diasNome = ['Segunda-Feira', 'Terça-Feira', 'Quarta-Feira', 'Quinta-Feira', 'Sexta-Feira', 'Sabado', 'Domingo']; 
+      diasNome = ['Segunda-Feira', 'Terça-Feira', 'Quarta-Feira', 'Quinta-Feira', 'Sexta-Feira', 'Sabado', 'Domingo'];
+      mesNomes = ['Janeiro', 'Fevereiro', 'Março', 'Abril','Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+      //Coleta partes da data para mostrar na página
+      dia = diasNome[weekFromToday.getDay()];
+      data = weekFromToday.getDate();
+      mes = mesNomes[weekFromToday.getMonth()];
+      ano = weekFromToday.getFullYear();
   }
   }())
