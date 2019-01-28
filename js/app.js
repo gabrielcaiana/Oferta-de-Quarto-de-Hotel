@@ -33,7 +33,7 @@
 
   function ofertaExpira(hoje) {
       //Declara as variaveis dentro da função, para escopo local
-      weekFromToday = dia, data, mes, ano, diasNome, mesNomes;
+      let weekFromToday, dia, data, mes, ano, diasNome, mesNomes;
       //Adiciona 7 dias a data/hora atual (adicionado em millisegundos)
       weekFromToday = new Date(hoje.getTime() + 7 * 24 * 60 * 60 * 1000);
       //Cria um array para armazenar os nomes dos dias/mesNomes
@@ -46,8 +46,11 @@
       ano = weekFromToday.getFullYear();
 
       //Cria a mensagem
-      expirarMensagem = 'Ofera expira em';
-      expirarMensagem += `${dia} <br /> ( ${data} ${mes} ${ano})`;
+      expirarMensagem = ' Ofera expira em ';
+      expirarMensagem += `${dia} <br /> ( ${data} ${mes} de  ${ano})`;
       return expirarMensagem;
   }
+      hoje = new Date(); // Coloca data de hoje na variavel
+      elTermino = document.getElementById('ofertaFinal'); // Obtém o elemento ofertaFinal
+      elTermino.innerHTML = ofertaExpira(hoje);
   }())
