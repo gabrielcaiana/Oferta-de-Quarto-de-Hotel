@@ -44,5 +44,10 @@
       data = weekFromToday.getDate();
       mes = mesNomes[weekFromToday.getMonth()];
       ano = weekFromToday.getFullYear();
+
+      //Cria a mensagem
+      expirarMensagem = 'Ofera expira em';
+      expirarMensagem += `${dia} <br /> ( ${data} ${mes} ${ano})`;
+      return expirarMensagem;
   }
   }())
